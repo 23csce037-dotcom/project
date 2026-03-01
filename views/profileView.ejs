@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>My Profile Details</title>
+
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6fa;
+            padding: 40px;
+        }
+
+
+        table {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+
+        th {
+            background: #667eea;
+            color: white;
+            text-align: left;
+            width: 30%;
+        }
+
+
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background: #764ba2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h2 style="text-align:center;">My Profile Details</h2>
+
+
+    <table>
+        <tr>
+            <th>Full Name</th>
+            <td>
+                <%= profile.name %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Age</th>
+            <td>
+                <%= profile.age %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Gender</th>
+            <td>
+                <%= profile.gender %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Date of Birth</th>
+            <td>
+                <%= profile.dob ? profile.dob.toDateString() : '' %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Disability Type</th>
+            <td>
+                <%= profile.disability %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Disability %</th>
+            <td>
+                <%= profile.percentage %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Location</th>
+            <td>
+                <%= profile.location %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Qualification</th>
+            <td>
+                <%= profile.qualification %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Experience Level</th>
+            <td>
+                <%= profile.ExprienceLevel %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Job Expectations</th>
+            <td>
+                <%= profile.JobExpectations %>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Preferred Job Location</th>
+            <td>
+                <%= profile.Joblocation %>
+            </td>
+        </tr>
+    </table>
+
+
+    <a href="/profile" class="btn">Edit Profile</a>
+
+
+</body>
+
+
+</html>

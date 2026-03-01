@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employer Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card shadow p-4">
+            <h3 class="mb-4 text-center">
+                <%= employer ? "Update Profile" : "Create Profile" %>
+            </h3>
+            <%= employer?.age || '' %>
+
+            <form action="/employer/profile" method="POST">
+
+                <!-- Name -->
+                <input class="form-control mb-3" name="name" placeholder="User Name" value="<%= employer?.name || '' %>"
+                    required>
+
+                <!-- Age -->
+                <input type="number" class="form-control mb-3" name="age" placeholder="Age"
+                    value="<%= employer?.age || '' %>">
+
+                <!-- Company Name -->
+                <input class="form-control mb-3" name="companyName" placeholder="Company Name"
+                    value="<%= employer?.companyName || '' %>" required>
+
+                <!-- Company Email -->
+                <input type="email" class="form-control mb-3" name="companyEmail" placeholder="Company Email"
+                    value="<%= employer?.companyEmail || '' %>" required>
+
+                <!-- Phone -->
+                <input class="form-control mb-3" name="phone" placeholder="Contact"
+                    value="<%= employer?.phone || '' %>">
+
+                <!-- Company Type -->
+                <input class="form-control mb-3" name="companyType" placeholder="Company Type"
+                    value="<%= employer?.companyType || '' %>">
+
+                <!-- Domain -->
+                <input class="form-control mb-3" name="industry" placeholder="Domain"
+                    value="<%= employer?.industry || '' %>">
+
+                <!-- Company Size -->
+                <input type="number" class="form-control mb-3" name="companySize" placeholder="Company Size"
+                    value="<%= employer?.companySize || '' %>">
+
+                <!-- Location -->
+                <input class="form-control mb-3" name="companyLocation" placeholder="Company Location"
+                    value="<%= employer?.companyLocation || '' %>">
+
+                <!-- Website -->
+                <input class="form-control mb-3" name="website" placeholder="Official Website"
+                    value="<%= employer?.website || '' %>">
+
+                <!-- Description -->
+                <textarea class="form-control mb-3" name="description"
+                    placeholder="Description"><%= employer?.description || '' %></textarea>
+
+                <button class="btn btn-primary w-100">
+                    <%= employer ? "Update Profile" : "Save Profile" %>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
