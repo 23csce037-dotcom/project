@@ -331,7 +331,7 @@
             </div>
         </div>
     </nav>
-    <%= employer.varshini || 'not set' %>
+    <%= employer.userId || 'not set' %>
 
     <main class="flex-fill">
 
@@ -359,15 +359,14 @@
             <tr>
                 <th>Company Name</th>
                 <td>
-                    test <%= employer.companyName %>
+                    <%= employer.companyname %>
                 </td>
             </tr>
-`
 
             <tr>
                 <th>Company Email</th>
                 <td>
-                    <%= employer.companyEmail %>
+                    <%= employer.companyemail %>
                 </td>
             </tr>
 
@@ -383,7 +382,7 @@
             <tr>
                 <th>Company Type %</th>
                 <td>
-                    <%= employer.companyType %>
+                    <%= employer.companytype %>
                 </td>
             </tr>
 
@@ -391,7 +390,7 @@
             <tr>
                 <th>Industry</th>
                 <td>
-                    <%= employer.industry %>
+                    <%= employer.domain %>
                 </td>
             </tr>
 
@@ -399,7 +398,7 @@
             <tr>
                 <th>Company Size</th>
                 <td>
-                    <%= employer.companySize %>
+                    <%= employer.companysize %>
                 </td>
             </tr>
 
@@ -407,7 +406,7 @@
             <tr>
                 <th>Company Location</th>
                 <td>
-                    <%= employer.companyLocation %>
+                    <%= employer.companylocation %>
                 </td>
             </tr>
 

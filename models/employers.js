@@ -22,13 +22,13 @@ const employerSchema = new mongoose.Schema({
     },
 
     // 🏢 Company Details
-    companyName: {
+    companyname: {
         type: String,
         required: true,
         trim: true
     },
 
-    companyEmail: {
+    companyemail: {
         type: String,
         required: true,
         unique: true,           // prevents duplicate emails
@@ -44,19 +44,19 @@ const employerSchema = new mongoose.Schema({
         type: Number
     },
 
-    companyType: {
+    companytype: {
         type: String
     },
 
-    industry: {
+    domain: {
         type: String
     },
 
-    companySize: {
+    companysize: {
         type: Number
     },
 
-    companyLocation: {
+    companylocation: {
         type: String
     },
 

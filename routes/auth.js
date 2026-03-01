@@ -137,6 +137,7 @@ router.post("/employer/profile", async (req, res) => {
 // ================== PROFILE VIEW ==================
 router.get("/employer/profile-view", async (req, res) => {
   try {
+    console.log("❌ PROFILE VIEW ROUTE HIT!");
     if (!req.session.userId)
       return res.redirect("/login");
 
@@ -146,6 +147,10 @@ router.get("/employer/profile-view", async (req, res) => {
 
     if (!employer)
       return res.redirect("/employer/profile");
+
+    console.log("Employer data:", employer);
+    console.log("companyName:", employer.companyName);
+    console.log("companyEmail:", employer.companyEmail);
 
     res.render("empProfileView", { employer });
 
